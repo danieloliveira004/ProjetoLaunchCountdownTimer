@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  position: relative;
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  height: 100vh;
+  background: url("../../images/pattern-hills.svg") no-repeat bottom, url("../../images/bg-stars.svg"), linear-gradient(to bottom, #1e1f29, #191a24);
+  background-size: 110% auto;
+}
+
+.container {
+  width: calc((100% - 40px));
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+
+#container-blocks {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.block span:first-of-type {
+  position: relative;
+  display: block;
+  background: #343650;
+  border-radius: 10px;
+  box-shadow: 0 10px 2px #191a24;
+  font-size: 5em;
+  color: #fb6087;
+}
+
+.darken {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  top: 0;
+  background: #191a24;
+  opacity: .2;
+}
+
+.texto {
+  padding-top: 20px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #8486a9;
+}
+.texto::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #191a24;
+  z-index: 5;
+  top: 65px;
+  left: -7px;
+}
+.texto::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #191a24;
+  z-index: 5;
+  top: 65px;
+  right: -7px;
+}
+
+#icon-links {
+  margin-top: 5em;
+}
+#icon-links a {
+  display: inline-block;
+  padding: 5px;
+  fill: #8385A9;
+  transition: fill .4s ease;
+}
+#icon-links a:hover {
+  fill: #fb6087;
+}
+
+@media (min-width: 800px) {
+  .block span:first-of-type {
+    width: 170px;
+    height: 170px;
+    line-height: 170px;
+  }
+}
+@media (max-width: 799px) {
+  .texto {
+    font-size: 1em;
+  }
+
+  .block {
+    font-size: 10px;
+  }
+  .block span:first-of-type {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+  }
+}
+@media (max-width: 550px) {
+  h1 {
+    font-size: 1.6em;
+  }
+
+  #container-blocks {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .texto {
+    font-size: 1.5em;
+  }
+
+  .block {
+    font-size: 6px;
+  }
+  .block span:first-of-type {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+  }
+}
+@media (max-width: 320px) {
+  h1 {
+    padding: 35px 0;
+  }
+}
