@@ -80,18 +80,16 @@ h1 {
   color: $graysinh-blue;
 
   // DESING
-
-  &::after {
+  &::after,  &::before {
     @include content;
-    top: 65px;
-    left: -7px;
+    top: 76px;
+    width: 15px;
+    height: 15px;
   }
 
-  &::before {
-    @include content;
-    top: 65px;
-    right: -7px;
-  }
+  &::after {left: -7px;}
+  &::before {right: -7px;}
+
 }
 
 // LINKS SOCIAL

@@ -118,28 +118,21 @@ h1 {
   letter-spacing: 0.3em;
   color: #8486a9;
 }
-.texto::after {
+.texto::after, .texto::before {
   content: '';
   position: absolute;
   display: block;
-  width: 15px;
-  height: 15px;
   border-radius: 50%;
   background-color: #191a24;
   z-index: 5;
-  top: 65px;
+  top: 76px;
+  width: 15px;
+  height: 15px;
+}
+.texto::after {
   left: -7px;
 }
 .texto::before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #191a24;
-  z-index: 5;
-  top: 65px;
   right: -7px;
 }
 
@@ -167,6 +160,11 @@ h1 {
   .texto {
     font-size: 1em;
   }
+  .texto::after, .texto::before {
+    width: 12px;
+    height: 12px;
+    top: 42px;
+  }
 
   .block {
     font-size: 10px;
@@ -189,6 +187,11 @@ h1 {
 
   .texto {
     font-size: 1.5em;
+  }
+  .texto::after, .texto::before {
+    width: 10px;
+    height: 10px;
+    top: 30px;
   }
 
   .block {
