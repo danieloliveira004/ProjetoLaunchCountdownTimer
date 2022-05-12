@@ -53,14 +53,19 @@ table {
   border-spacing: 0;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   position: relative;
   font-family: "Red Hat Text", sans-serif;
   font-weight: 700;
   font-size: 14px;
-  height: 100vh;
-  background: url("../../images/pattern-hills.svg") no-repeat bottom, url("../../images/bg-stars.svg"), linear-gradient(to bottom, #1e1f29, #191a24);
-  background-size: 110% auto;
+  max-height: 100vh;
+  background: url("../images/pattern-hills.svg") no-repeat, url("../images/bg-stars.svg"), linear-gradient(to bottom, #1e1f29, #191a24);
+  background-size: 200% auto;
+  background-position: bottom;
 }
 
 .container {
